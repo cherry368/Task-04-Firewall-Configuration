@@ -79,12 +79,6 @@ Go back to **Inbound Rules** → Find **"Block Telnet Port 23"** → Right-click
 - **Allow Rules:** Permit specific services (e.g., SSH).
 - **Deny Rules:** Block insecure services (e.g., Telnet).
 
-📸 **Screenshot Example:**
-```
-/screenshots/firewall_flow_diagram.png
-```
-*(Add a simple diagram showing "Internet → Firewall → PC")*
-
 ---
 
 ## 🧩 Example Output (Linux)
