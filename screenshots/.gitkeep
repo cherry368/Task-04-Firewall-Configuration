@@ -1,0 +1,14 @@
+# This folder contains screenshots for the firewall configuration task
+# Add your screenshot files here:
+# - windows_open_firewall.png
+# - windows_list_rules.png
+# - windows_block_telnet.png
+# - windows_test_block.png
+# - windows_remove_rule.png
+# - linux_ufw_status.png
+# - linux_block_telnet.png
+# - linux_test_telnet.png
+# - linux_allow_ssh.png
+# - linux_remove_rule.png
+# - firewall_flow_diagram.png
+# - linux_final_output.png
