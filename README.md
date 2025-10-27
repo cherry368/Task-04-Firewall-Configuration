@@ -59,78 +59,14 @@ Go back to **Inbound Rules** → Find **"Block Telnet Port 23"** → Right-click
 
 ---
 
-## 🐧 Linux Firewall (UFW) Configuration
-
-### 1️⃣ Enable and Check UFW
-```bash
-sudo apt update
-sudo apt install ufw -y
-sudo ufw enable
-sudo ufw status numbered
-```
-
-📸 **Screenshot Example:**
-```
-/screenshots/linux_ufw_status.png
-```
-
-### 2️⃣ Block Inbound Traffic on Port 23
-```bash
-sudo ufw deny 23/tcp
-```
-
-📸 **Screenshot Example:**
-```
-/screenshots/linux_block_telnet.png
-```
-
-### 3️⃣ Test the Rule
-```bash
-nc -zv localhost 23
-```
-
-**Expected Output:**
-```
-nc: connect to localhost port 23 (tcp) failed: Connection refused
-```
-
-📸 **Screenshot Example:**
-```
-/screenshots/linux_test_telnet.png
-```
-
-### 4️⃣ Allow SSH (Port 22)
-```bash
-sudo ufw allow 22/tcp
-```
-
-📸 **Screenshot Example:**
-```
-/screenshots/linux_allow_ssh.png
-```
-
-### 5️⃣ Remove the Test Block Rule
-```bash
-sudo ufw delete deny 23/tcp
-sudo ufw status numbered
-```
-
-📸 **Screenshot Example:**
-```
-/screenshots/linux_remove_rule.png
-```
-
----
-
 ## 🧾 Command Summary Table
 
-| Action | Windows Command/Steps | Linux (UFW) Command |
-|--------|----------------------|---------------------|
-| **View Rules** | GUI → Inbound Rules | `sudo ufw status numbered` |
-| **Block Port 23** | New inbound rule (TCP 23) | `sudo ufw deny 23/tcp` |
-| **Test Rule** | `telnet localhost 23` | `nc -zv localhost 23` |
-| **Allow SSH** | — | `sudo ufw allow 22/tcp` |
-| **Remove Rule** | Delete via GUI | `sudo ufw delete deny 23/tcp` |
+| Action | Windows Command/Steps |
+|--------|----------------------|
+| **View Rules** | GUI → Inbound Rules |
+| **Block Port 23** | New inbound rule (TCP 23) |
+| **Test Rule** | `telnet localhost 23` |
+| **Remove Rule** | Delete via GUI |
 
 ---
 
@@ -162,12 +98,6 @@ To                         Action      From
 23/tcp                     DENY        Anywhere
 ```
 
-📸 **Screenshot Example:**
-```
-/screenshots/linux_final_output.png
-```
-
----
 
 ## ✅ Outcome
 
